@@ -8,9 +8,7 @@ const router = express.Router();
 router.get("/", Controller.getWorkouts);
 
 // GET a single workout
-router.get("/:id", (req, res) => {
-  res.json({ mssg: "GET a single workout" });
-});
+router.get("/:id", Controller.getWorkout);
 
 // POST a new workout
 router.post("/", Controller.createWorkout);
