@@ -5,9 +5,7 @@ const Controller = require("../controllers/workoutController");
 const router = express.Router();
 
 // GET all workouts
-router.get("/", (req, res) => {
-  res.json({ mssg: "GET all workouts" });
-});
+router.get("/", Controller.getWorkouts);
 
 // GET a single workout
 router.get("/:id", (req, res) => {
